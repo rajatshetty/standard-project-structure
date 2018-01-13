@@ -9,11 +9,10 @@ import { SecondComponent } from './components/second/second.component';
 import { ThirdComponent } from './components/third/third.component';
 
 const routes: Routes = [
-  // basic routes
   { path: '', redirectTo: 'first', pathMatch: 'full' },
-  { path: 'first', component: FirstComponent },
-  { path: 'second', component: SecondComponent },
-  { path: 'third', component: ThirdComponent }
+  { path: 'first', loadChildren:'./modules/main-module/main-module.module#MainModuleModule' }, 
+  { path: 'second', component:SecondComponent },
+  { path: 'third', loadChildren:'./modules/module3/module3.module#Module3Module' }
 ];
 @NgModule({
   declarations: [

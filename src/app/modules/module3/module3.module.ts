@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { SecondComponent } from './components/second/second.component';
+import { ThirdComponent } from './components/third/third.component';
 
 const routes: Routes = [
   // basic routes
   { path: '', redirectTo: 'first', pathMatch: 'full' },
-  { path: 'home', component:SecondComponent }
+  { path: 'home', component:ThirdComponent }
 ];
-
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [SecondComponent]
+  declarations: [ThirdComponent]
 })
-export class Module2Module { }
+export class Module3Module { }
